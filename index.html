@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta
       name="description"
       content="Freiheit — an independent product and research project exploring multimodal AI for everyday visual accessibility."
@@ -640,8 +638,8 @@
       }
 
       /* =====================================================
-   EVERYDAY QUESTIONS
-   ====================================================== */
+      EVERYDAY QUESTIONS
+      ====================================================== */
 
       .questions-section {
         background: var(--background);
@@ -1268,20 +1266,62 @@
       text-align: center;
       }
 
-.architecture-heading {
-  text-align: center;
-  margin-bottom: 25px;
-}
+      .architecture-heading {
+        text-align: center;
+        margin-bottom: 25px;
+      }
 
-.architecture-row img {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-}
+      .architecture-row img {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
 
+      .screenshot-stack {
+        position: relative;
+        width: min(400px, 100%);
+        min-height: 470px;
+      }
+
+      .screenshot-card {
+        position: absolute;
+        padding: 10px;
+        width: 66%;
+      }
+
+      .screenshot-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        display: block;
+      }
+
+      .card-back {
+        top: 0;
+        left: 0;
+        transform: rotate(-6deg);
+        z-index: 1;
+      }
+
+      .card-front {
+        bottom: 0;
+        right: -5%;
+        transform: rotate(4deg);
+        z-index: 2;
+      }
+
+
+      @media (max-width: 600px) {
+        .screenshot-stack {
+          min-height: 400px;
+        }
+        .screenshot-card {
+          width: 62%;
+        }
+      }
       /* Responsive */
 
       @media (max-width: 900px) {
@@ -1354,55 +1394,49 @@
 
         </button> </div>
 
-      <nav class="nav-links" aria-label="Main navigation">
+  <nav class="nav-links" aria-label="Main navigation">
 
-  <!-- Freiheit navigation -->
+      <!-- Freiheit navigation -->
 
-  <div class="freiheit-nav product-navigation">
-    <a href="#project">Project</a>
-    <a href="#capabilities">Capabilities</a>
-    <a href="#research">Research</a>
+      <div class="freiheit-nav product-navigation">
+        <a href="#project">Project</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#research">Research</a>
+        <a
+          href="https://github.com/Mnlohani/Freiheit"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="always-visible">
+          GitHub ↗ 
+        </a>
+      </div>
 
+      <!-- Listly navigation -->
 
-<a
-  href="https://github.com/Mnlohani/Freiheit"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="always-visible"
->
-  GitHub ↗
-</a>
+      <div class="listly-nav product-navigation" hidden>
+          <a href="#listly-about">About</a>
+          <a href="#listly-capabilities">Technology</a>
+          <a href="#listly-stack">Architecture</a>
+          <a
+                        href="https://youtu.be/u1gUDepjE00"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Demo
+                      </a>
+      </div>
 
+        <button
+        id="themeButton"
+        class="theme-button"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Toggle light and dark mode"
+        >
+        ◐
+        </button>
 
-  </div>
-
-  <!-- Listly navigation -->
-
-  <div class="listly-nav product-navigation" hidden>
-    <a href="#listly-about">About</a>
-    <a href="#listly-capabilities">Technology</a>
-    <a href="#listly-stack">Architecture</a>
-    <a
-                  href="https://youtu.be/u1gUDepjE00"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Demo
-                </a>
-  </div>
-
-<button
-id="themeButton"
-class="theme-button"
-type="button"
-aria-label="Switch to dark mode"
-title="Toggle light and dark mode"
-
->
-◐
-  </button>
-
-</nav>
+    </nav>
 
     </header>
 
@@ -1440,9 +1474,10 @@ title="Toggle light and dark mode"
               <a href="#capabilities" class="button button-secondary">
                 Explore Freiheit ↓
               </a>
-              <a href="https://github.com/Mnlohani/Freiheit" class="button button-secondary">
+              <a href="https://github.com/Mnlohani/Freiheit" class="button button-secondary" 
+              target="_blank" rel="noopener noreferrer">
               GitHub ↗
-            </a>
+              </a>
               </a>
             </div>
           </div>
@@ -1832,16 +1867,16 @@ title="Toggle light and dark mode"
               <div class="actions reveal">
 
                 <a
-                  href="#listly-about"
+                  href="https://youtu.be/u1gUDepjE00"
                   class="button listly-button-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                 Watch the demo on Youtube ↗  
                 </a>
 
                 <a
-                  href="https://youtu.be/u1gUDepjE00"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#listly-about"
                   class="button button-secondary"
                 >
                   Explore Listly ↓
@@ -1852,59 +1887,39 @@ title="Toggle light and dark mode"
             </div>
 
             <!-- Shopping cart visual -->
-            <div class="listly-cart-visual reveal" aria-hidden="true">
 
-              <div class="cart-glow"></div>
+              <div class="listly-cart-visual reveal" aria-hidden="true">
 
-              <div class="cart-card">
+                <div class="cart-glow"></div>
 
-                <div class="cart-top">
-                  <span>My shopping list</span>
-                  
+                <div class="screenshot-stack">
+
+                  <div class="cart-card screenshot-card card-back">
+                    <img
+                        src="./assets/images/show_List.jpg"
+                      alt="Listly Telegram bot introduction and features"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="cart-card screenshot-card card-front">
+                    <img
+                      src="./assets/images/Intro_listly.jpg"
+                      alt="Listly shopping list on Telegram"
+                      loading="lazy"
+                    />
+                  </div>
+
                 </div>
-
-                <p>
-                <ul class="shopping-list">
-                    <span class="category-title">📦 Brot, Cerealien & Aufstriche</span>
-                    <ul class="items">
-                      <li>Haferflocken</li>
-                    </ul>
-                   <span class="category-title">📦 Getränke & Genussmittel</span>
-                    <ul class="items">
-                      <li>Wasser</li>
-                      <li>Coke</li>
-                    </ul>
-                    <span class="category-title">📦 Obst & Gemüse</span>
-                    <ul class="items">
-                      <li>Potato</li>
-                      <li>Brocalli</li>
-                      <li>Banana</li>
-                      <li>Beans</li>
-                    </ul>
-                </ul>
-                </ul>                  
-              </p>
-
-                <div class="cart-total">
-                  <span>Listly</span>
-                  <span>🛒</span>
-                </div>
-
-              </div>
-
-            </div>
 
           </div>
 
         </div>
-
-
-          </section>
+        </section>
 
           <!-- LISTLY INTRO -->
 
           <section id="listly-about" class="listly-intro">
-
 
         <div class="container">
 
@@ -1975,7 +1990,6 @@ title="Toggle light and dark mode"
                 Zeige meine Liste.
               </p>
             </div>
-
             <div class="chat-message ai-message">
               <span class="chat-label">Listly</span>
               <p>
@@ -2002,11 +2016,9 @@ title="Toggle light and dark mode"
             </div>
           </div>
         </div>
+        </section>
 
-
-          </section>
-
-          <!-- LISTLY CAPABILITIES -->
+        <!-- LISTLY CAPABILITIES -->
 
           <section id="listly-capabilities" class="listly-capabilities"> </section>
 
@@ -2023,15 +2035,12 @@ title="Toggle light and dark mode"
           </h2>
 
           <div class="listly-feature-grid">
-            
             <article class="listly-feature-card reveal">
 
               <div class="listly-feature-number">
                 01
               </div>
-
               <h3>LangGraph + Gemini</h3>
-
             <p> Built with LangGraph to orchestrate the AI agent’s workflow, keeping shopping-list tasks structured, reliable, and easy to extend. </p>
 
             </article>
@@ -2109,46 +2118,36 @@ title="Toggle light and dark mode"
                 Listly understands German, English and mixed-language
                 conversations naturally.
               </p>
-
-            
-
-
-            
-
           </div>
-
         </div>
-
-
           </section>
 
           <!-- LISTLY ARCHITECTURE -->
 
           <section id="listly-stack" class="listly-stack">
-  <div class="container">
+        <div class="container">
 
-    <div class="listly-stack-grid">
-      <div class="reveal">
-        <div class="eyebrow">Engineering</div>
-        <h2>An AI agent</h2>
-        <p class="lead">
-          Listly connects conversational input keeping validation and security at the core of the system.
-        </p>
+          <div class="listly-stack-grid">
+            <div class="reveal">
+              <div class="eyebrow">Engineering</div>
+              <h2>An AI agent</h2>
+              <p class="lead">
+                Listly connects conversational input keeping validation and security at the core of the system.
+              </p>
+            </div>
+          </div>
+
+          <div class="architecture-images reveal">
+          <div class="architecture-row">
+            <img
+              src="https://raw.githubusercontent.com/Mnlohani/mnlohani.github.io/main/images/Archtecture_Listly.png"
+              alt="Listly architecture diagram"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-
-   <div class="architecture-images reveal">
-  <div class="architecture-row">
-    <img
-      src="https://raw.githubusercontent.com/Mnlohani/mnlohani.github.io/main/images/Archtecture_Listly.png"
-      alt="Listly architecture diagram"
-      loading="lazy"
-    />
-  </div>
-</div>
-
-  </div>
-</section>
+        </section>
 
 
           <!-- LISTLY CTA -->
